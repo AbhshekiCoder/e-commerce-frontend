@@ -110,9 +110,9 @@ function Navbar({profile, submit}){
         </div>
 
         </div>
-       
+      
         </>
     )
 
 }
-export default Navbar;s
+export default Navbar;
