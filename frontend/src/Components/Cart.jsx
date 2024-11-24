@@ -17,7 +17,7 @@ function Cart(){
         let body = {
             userid: userid
         }
-        let result =   axios.post('http://localhost:5000/carts', body )
+        let result =   axios.post(`${url}carts`, body )
         .then((result)=>{
             console.log(result.data);
             setCart(result.data);
@@ -26,7 +26,7 @@ function Cart(){
             
           })
 
-          axios.post('http://localhost:5000/price', body).then((result1)=>{
+          axios.post(`${url}price`, body).then((result1)=>{
             setData(result1.data);
             console.log(data)
           
