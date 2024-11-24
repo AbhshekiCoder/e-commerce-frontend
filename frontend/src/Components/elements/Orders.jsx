@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
-
+import url from "../../misc/url";
 function Orders(){
     useEffect(async()=>{
         let order = localStorage.getItem("orders");
@@ -16,7 +16,7 @@ function Orders(){
         
 
     }))
-     let result = await axios.post("http://localhost:5000/orders", orders);
+     let result = await axios.post(`${url}orders`, orders);
 
     }, [])
     return (
