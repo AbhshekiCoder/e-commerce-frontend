@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react';
 import signup from '../pictures/signup.jpeg';
 import google_icon from '../pictures/google.svg';
 import { Link } from 'react-router-dom';
+import url from "../../misc/url";
 //import bcrypt from 'bcryptjs';
 function Signup(){
   const [password1, setPassword1] = useState("null");
@@ -76,7 +77,7 @@ function Signup(){
     //let result1 = await axios.post("http://localhost:5000/register", {formData});
     axios({
       method: 'post',
-      url: 'http://localhost:5000/register', // Replace with your backend API endpoint
+      url: `${url}register`, // Replace with your backend API endpoint
       data: body
      
   })
