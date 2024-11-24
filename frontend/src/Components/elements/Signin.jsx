@@ -2,6 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import signup from '../pictures/signup.jpeg';
 import { useEffect } from "react";
+import url from "../../misc/url";
 function Signin(){
   const navigate = useNavigate();
   let userid = localStorage.getItem("user_id");
@@ -29,7 +30,7 @@ function Signin(){
         }
        // let formData2 = new FormData();
         //formData2.append('email', `${email}`);
-        let result1 = await axios.post("http://localhost:5000/signin", body)
+        let result1 = await axios.post(`${url}signin`, body)
         .then(function (response) {
             // Handle success
             alert(response.data.success);
