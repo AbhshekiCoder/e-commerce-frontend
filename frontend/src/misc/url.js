@@ -1,4 +1,4 @@
-let url = "http://localhost:5000/";
+let url = "https://e-commerce-p3i2.onrender.com/";
 
 
 export default url;
