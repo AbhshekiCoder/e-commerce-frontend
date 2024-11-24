@@ -14,6 +14,7 @@ import ad2 from '../pictures/ad2.png';
 import ad3 from '../pictures/ad3.jpeg';
 import ad4 from '../pictures/ad4.png';
 import p from '../pictures/p.png';
+import url from "../../misc/url";
 
 function Content({deals, image, cards}){
   const [slide2, setSlide2] = useState();
@@ -83,7 +84,7 @@ useEffect( ()=>{
 
 },[])
  useEffect( ()=>{
-    axios.post('http://localhost:5000/Products_Category' ).then( function (response){
+    axios.post(`${url}Products_Category` ).then( function (response){
     console.log(response.data);
     setCategory(response.data);
   },[])
